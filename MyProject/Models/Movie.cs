@@ -5,13 +5,11 @@ using System.Threading.Tasks;
 
 namespace MyProject.Models
 {
-    public class Director
+    public class Movie
     {
         public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public int MovieID { get; set; }
+        public string Name { get; set; }
+        public int DirectorID { get; set; }
         public int ActorID { get; set; }
-
     }
 }

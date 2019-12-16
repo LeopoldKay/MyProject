@@ -33,7 +33,8 @@ namespace MyProject
             });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddSingleton<IDirectorRepository, DirectorRepository>();
+            services.AddSingleton<IDataRepository, DataRepository>();
+            
 
         }
 

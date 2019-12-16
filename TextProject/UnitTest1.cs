@@ -14,7 +14,7 @@ namespace TextProject
         [TestMethod]
         public void TestMethod1()
         {
-            Mock<IDirectorRepository> characterRepository = new Mock<IDirectorRepository>();
+            Mock<IDataRepository> characterRepository = new Mock<IDataRepository>();
             characterRepository.Setup(x => x.GetDirectors()).Returns(new List<Director>() { new Director() });
             var homeController = new HomeController(characterRepository.Object);
 
@@ -35,7 +35,7 @@ namespace TextProject
         [TestMethod]
         public void TestMethod2()
         {
-            Mock<IDirectorRepository> characterRepository = new Mock<IDirectorRepository>();
+            Mock<IDataRepository> characterRepository = new Mock<IDataRepository>();
             characterRepository.Setup(x => x.GetDirectors()).Returns(new List<Director>() { new Director() });
             var homeController = new HomeController(characterRepository.Object);
 

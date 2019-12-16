@@ -22,3 +22,4 @@ G:\Leopold Docs\C#\Study\Advance\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyP
 G:\Leopold Docs\C#\Study\Advance\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.Views.pdb
 G:\Leopold Docs\C#\Study\Advance\MyProject\MyProject\obj\Debug\netcoreapp2.1\MyProject.csproj.CopyComplete
 G:\Leopold Docs\C#\Study\Advance\MyProject\MyProject\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+G:\Leopold Docs\C#\Study\Advance\MyProject\MyProject\obj\Debug\netcoreapp2.1\Razor\Views\Home\ShowMovies.g.cshtml.cs

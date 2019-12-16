@@ -5,8 +5,11 @@ using System.Threading.Tasks;
 
 namespace MyProject.Models.Repositories
 {
-    public interface IDirectorRepository
+    public interface IDataRepository
     {
         List<Director> GetDirectors();
+        List<MovieSelect> GetMovies();
+        List<Actor> GetActors();
+        //List<Cast> GetCasting();
     }
 }

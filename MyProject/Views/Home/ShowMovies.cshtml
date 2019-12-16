@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ShowMovies</title>
+</head>
+<body>
+    <table>
+        @foreach (var character in (ViewData["Characters"] as List<MyProject.Models.MovieSelect>))
+        {
+        <tr>
+            <td>@character.Name</td>
+            <td>>@character.DirectorName</td>
+            <td>@character.DirectorLastName</td>
+            <td>@character.ActorName</td>
+            <td>@character.ActorLastName</td>
+        </tr>
+        }
+    </table>
+</body>
+</html>

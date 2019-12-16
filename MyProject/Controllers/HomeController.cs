@@ -10,37 +10,43 @@ namespace MyProject.Controllers
 {
     public class HomeController : Controller
     {
-        private IDirectorRepository directorRepository;
+        private IDataRepository dataRepository;
         
 
-        public HomeController(IDirectorRepository directorRepository)
+        public HomeController(IDataRepository dataRepository)
         {
-            this.directorRepository = directorRepository;
+            this.dataRepository = dataRepository;
         }
 
         public ViewResult Index()
         {
-           // ViewBag.view = "This is Test Index Page";
           return View();
         }
 
         public Director DirData(int id)
         {
-            var dirData = directorRepository.GetDirectors().FirstOrDefault(x=>x.Id == id);
+            var dirData = dataRepository.GetDirectors().FirstOrDefault(x=>x.Id == id);
             return dirData;
 
         }
         public ViewResult DirData2(int id)
         {
-            var dirData = directorRepository.GetDirectors().FirstOrDefault(x => x.Id == id);
+           
+            var dirData = dataRepository.GetDirectors().FirstOrDefault(x => x.Id == id);
             return View(dirData);
 
         }
 
+        public ViewResult ShowMovies()
+        {
+           
+            ViewData["Characters"] = dataRepository.GetMovies();
+            return View();
+        }
 
         public ViewResult TestMethod()
         {
-            var director = directorRepository.GetDirectors().FirstOrDefault(x => x.Id == 2);
+            var director = dataRepository.GetDirectors().FirstOrDefault(x => x.Id == 2);
             ViewBag.name = director.LastName;
             return View();
         }

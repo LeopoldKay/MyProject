@@ -50,7 +50,7 @@ using MyProject.Controllers;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             BeginContext(55, 47, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7740e243ce694c3bb8a7836fba3be4e7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c98366a7a124ca896d4ee7c32f93bdf", async() => {
                 BeginContext(61, 34, true);
                 WriteLiteral("\r\n    <title>Test Method</title>\r\n");
                 EndContext();
@@ -70,7 +70,7 @@ using MyProject.Controllers;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(104, 106, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ce3d11c9ccc14c2f9dcf32c70b6d79e6", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b1b205f9f4a94a0aadf68eb6c8934afb", async() => {
                 BeginContext(110, 43, true);
                 WriteLiteral("\r\n    <table>\r\n\r\n        <tr>\r\n            ");
                 EndContext();
