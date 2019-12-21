@@ -7,29 +7,61 @@ namespace MyProject.Models.Repositories
 {
     public class DataRepository : IDataRepository
     {
-        public List<Actor> GetActors()
+        public List<DescSelect> Description()
         {
             var context = new NetCoreWebAppContext();
-            return context.Actors.ToList();
+            var DescSelect = from dsc in context.Description
+                             join mov in context.Movie on dsc.MovieID equals mov.Id
+                             join dir in context.Directors on dsc.DirectorID equals dir.Id
+                             join act in context.Actors on dsc.ActorID equals act.DirectorID
+                             select new DescSelect { MovieName = mov.Name, DirectorName = dir.FirstName, DirectorLastName = dir.LastName, ActorName = act.FirstName, ActorLastName = act.LastName, Description = dsc.Description };
+            return DescSelect.ToList();
+        }
+
+        public List<GenreSelect> Genres()
+        {
+            var context = new NetCoreWebAppContext();
+            var genreSelect = from gen in context.Genres
+                              join mov in context.Movie on gen.MovieID equals mov.Id
+                              select new GenreSelect { GenreName = gen.GenreName, MovieName = mov.Name};
+            return genreSelect.ToList();
+        }
+
+        public List<ActorSelect> GetActors()
+        {
+            var context = new NetCoreWebAppContext();
+            var actorSelect = from act in context.Actors
+                              join mov in context.Movie on act.MovieID equals mov.Id
+                              select new ActorSelect { Movie = mov.Name, ActorName = act.FirstName, ActorLastName = act.LastName};
+            return actorSelect.ToList();
         }
 
         
-        public List<Director> GetDirectors()
+        public List<DirSelect> GetDirectors()
         {
             var context = new NetCoreWebAppContext();
-            return context.Directors.ToList();
+            var directorSelect = from dir in context.Directors
+                              join mov in context.Movie on dir.MovieID equals mov.Id
+                              select new DirSelect { Movie = mov.Name,  DirectorName = dir.FirstName, DirectorLastName = dir.LastName };
+            return directorSelect.ToList();
         }
 
         public List<MovieSelect> GetMovies()
         {
             var context = new NetCoreWebAppContext();
-            var movieSelect = from d in context.Directors
-                              from a in context.Actors
-                              join md in context.Movie on d.Id equals md.DirectorID
-                              join ma in context.Movie on a.Id equals ma.ActorID
-                              select new MovieSelect { Name = md.Name,  DirectorName = d.FirstName, DirectorLastName = d.LastName, ActorName = a.FirstName, ActorLastName = a.LastName  };
+            var movieSelect = from m in context.Movie
+                              join d in context.Directors on m.DirectorID equals d.Id
+                              join a in context.Actors on m.ActorID equals a.Id
+                              select new MovieSelect { Name = m.Name,  DirectorName = d.FirstName, DirectorLastName = d.LastName, ActorName = a.FirstName, ActorLastName = a.LastName  };
             return movieSelect.ToList();
 
         }
+
+        public List<Director> GetDirectorTest()
+        {
+            var context = new NetCoreWebAppContext();
+            return context.Directors.ToList();
+        }
+
     }
 }

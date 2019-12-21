@@ -22,6 +22,9 @@ namespace MyProject
         public DbSet<Director> Directors { get; set; }
         public DbSet<Movie> Movie { get; set; }
         public DbSet<Actor> Actors { get; set; }
-        
+        public DbSet<Descry> Description { get; set; }
+        public DbSet<Genre> Genres { get; set; }
+
+
     }
 }

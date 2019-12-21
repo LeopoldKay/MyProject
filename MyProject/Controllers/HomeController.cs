@@ -23,16 +23,11 @@ namespace MyProject.Controllers
           return View();
         }
 
-        public Director DirData(int id)
-        {
-            var dirData = dataRepository.GetDirectors().FirstOrDefault(x=>x.Id == id);
-            return dirData;
-
-        }
+       
         public ViewResult DirData2(int id)
         {
            
-            var dirData = dataRepository.GetDirectors().FirstOrDefault(x => x.Id == id);
+            var dirData = dataRepository.GetDirectorTest().FirstOrDefault(x => x.Id == id);
             return View(dirData);
 
         }
@@ -44,10 +39,38 @@ namespace MyProject.Controllers
             return View();
         }
 
+        public ViewResult Description()
+        {
+
+           ViewData["Description"] = dataRepository.Description();
+            return View();
+        }
+
+        public ViewResult ShowActors()
+        {
+
+            ViewData["Actors"] = dataRepository.GetActors();
+            return View();
+        }
+
+        public ViewResult ShowDirectors()
+        {
+
+            ViewData["Directors"] = dataRepository.GetDirectors();
+            return View();
+        }
+
+        public ViewResult ShowGenres()
+        {
+
+            ViewData["Genres"] = dataRepository.Genres();
+            return View();
+        }
+
         public ViewResult TestMethod()
         {
-            var director = dataRepository.GetDirectors().FirstOrDefault(x => x.Id == 2);
-            ViewBag.name = director.LastName;
+            var director = dataRepository.GetDirectors().FirstOrDefault(x => x.DirectorName == "Locas");
+            ViewBag.name = director.DirectorName;
             return View();
         }
     }

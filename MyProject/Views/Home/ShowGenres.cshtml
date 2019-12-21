@@ -1,0 +1,42 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ShowGenres</title>
+    <style>
+        table {
+            width: 500px; /* Ширина таблицы */
+            border: 1px solid green; /* Рамка вокруг таблицы */
+            margin: auto; /* Выравниваем таблицу по центру окна  */
+        }
+
+        td {
+            text-align: center; /* Выравниваем текст по центру ячейки */
+        }
+    </style>
+</head>
+<body>
+    <table><tr><td>Genres Table</td></tr> </table>
+    <table>
+        @foreach (var character in (ViewData["Genres"] as List<MyProject.Models.GenreSelect>))
+        {
+            <tr>
+                <td>@character.GenreName</td>
+                <td>@character.MovieName</td>
+            </tr>
+        }
+    </table>
+    <table>
+        <tr><td><a href="https://localhost:5001/home/ShowDirectors">Previous Table</a></td><td><a href="https://localhost:5001/home/Description">Next Table</a></td></tr>
+    </table>
+
+    <table><tr><td><a href="https://localhost:5001/">On Main Page</a></td></tr></table>
+
+</body>
+</html>

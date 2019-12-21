@@ -1,4 +1,4 @@
-﻿@using System.Text.Encodings.Web;
+﻿
 @{
     Layout = null;
 }
@@ -8,7 +8,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>ShowMovies</title>
+    <title>ShowDirectors</title>
     <style>
         table {
             width: 500px; /* Ширина таблицы */
@@ -17,29 +17,23 @@
         }
 
         td {
-            /*width: 300px; /* Ширина таблицы */
-            /*border: 1px solid green; /* Рамка вокруг таблицы */
-            /*margin: auto; /* Выравниваем таблицу по центру окна  */
             text-align: center; /* Выравниваем текст по центру ячейки */
         }
     </style>
 </head>
 <body>
-    <table><tr><td>Movies Table</td></tr> </table>
+    <table><tr><td>Directors Table</td></tr> </table>
     <table>
-
-        @foreach (var character in (ViewData["Characters"] as List<MyProject.Models.MovieSelect>))
+        @foreach (var character in (ViewData["Directors"] as List<MyProject.Models.DirSelect>))
         {
             <tr>
-                <td>@character.Name</td>
+                <td>@character.Movie</td>
                 <td>@character.DirectorName @character.DirectorLastName</td>
-                <td>@character.ActorName @character.ActorLastName</td>
             </tr>
         }
-
     </table>
     <table>
-        <tr><td><a href="https://localhost:5001/home/Description">Previous Table</a></td><td><a href="https://localhost:5001/home/ShowActors">Next Table</a></td></tr>
+        <tr><td><a href="https://localhost:5001/home/ShowActors">Previous Table</a></td><td><a href="https://localhost:5001/home/ShowGenres">Next Table</a></td></tr>
     </table>
 
     <table><tr><td><a href="https://localhost:5001/">On Main Page</a></td></tr></table>

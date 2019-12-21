@@ -15,11 +15,11 @@ namespace TextProject
         public void TestMethod1()
         {
             Mock<IDataRepository> characterRepository = new Mock<IDataRepository>();
-            characterRepository.Setup(x => x.GetDirectors()).Returns(new List<Director>() { new Director() });
+            characterRepository.Setup(x => x.GetDirectorTest()).Returns(new List<Director>() { new Director() });
             var homeController = new HomeController(characterRepository.Object);
 
-            var viewResult = homeController.DirData2(2);
-            //var dirType = new Director();
+            var viewResult = homeController.DirData2(1);
+            var dirType = new Director();
 
             var character = viewResult.ViewData["dirData"];
             
@@ -27,23 +27,6 @@ namespace TextProject
 
         }
 
-        private Type GetType(Director dirType)
-        {
-            throw new NotImplementedException();
-        }
-
-        [TestMethod]
-        public void TestMethod2()
-        {
-            Mock<IDataRepository> characterRepository = new Mock<IDataRepository>();
-            characterRepository.Setup(x => x.GetDirectors()).Returns(new List<Director>() { new Director() });
-            var homeController = new HomeController(characterRepository.Object);
-
-            var viewResult = homeController.DirData(2).FirstName;
-            string name = "Martin";
-
-            Assert.AreSame(viewResult, name);
-
-        }
+        
     }
 }

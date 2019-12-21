@@ -7,9 +7,11 @@ namespace MyProject.Models.Repositories
 {
     public interface IDataRepository
     {
-        List<Director> GetDirectors();
+        List<DirSelect> GetDirectors();
         List<MovieSelect> GetMovies();
-        List<Actor> GetActors();
-        //List<Cast> GetCasting();
+        List<ActorSelect> GetActors();
+        List<DescSelect> Description();
+        List<GenreSelect> Genres();
+        List<Director> GetDirectorTest();
     }
 }
