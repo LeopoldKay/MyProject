@@ -24,11 +24,11 @@ namespace MyProject.Controllers
         }
 
        
-        public ViewResult DirData2(int id)
+        public Director DirData2(int id)
         {
            
             var dirData = dataRepository.GetDirectorTest().FirstOrDefault(x => x.Id == id);
-            return View(dirData);
+            return dirData;
 
         }
 

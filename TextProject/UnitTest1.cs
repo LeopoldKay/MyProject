@@ -21,7 +21,7 @@ namespace TextProject
             var viewResult = homeController.DirData2(1);
             var dirType = new Director();
 
-            var character = viewResult.ViewData["dirData"];
+            //var character = viewResult.ViewData["dirData"];
             
             Assert.IsInstanceOfType(viewResult, typeof(Director));
 
