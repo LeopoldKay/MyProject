@@ -27,6 +27,18 @@ namespace TextProject
 
         }
 
-        
+        [TestMethod]
+        public void TestMethod2()
+        {
+
+            var repo = new DataRepository();
+            var dirList =  repo.GetDirectors();
+            
+
+            Assert.IsInstanceOfType(dirList, typeof(List<DirSelect>));
+
+        }
+
+
     }
 }
