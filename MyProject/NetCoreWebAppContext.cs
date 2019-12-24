@@ -13,7 +13,7 @@ namespace MyProject
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             IConfigurationRoot configuration = new ConfigurationBuilder()
-                .SetBasePath(@"G:\Leopold Docs\C#\Study\StudyRepository\CSharpProfessional\13.NetCore\NetCoreWebApp\NetCoreWebApp")
+                .SetBasePath(@"I:\Leopold Docs\C#\Study\Advance\MyProject\MyProject")
                 .AddJsonFile("appsettings.json")
                 .Build();
             optionsBuilder.UseSqlServer(configuration.GetConnectionString("NetCoreWebAppContext"));
