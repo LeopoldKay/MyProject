@@ -7,6 +7,7 @@ namespace MyProject.Models.Repositories
 {
     public class DataRepository : IDataRepository
     {
+        //Связывающая таблица, задания 13 часть 3. Так же присутствует в финальном проекте
         public List<DescSelect> Description()
         {
             var context = new NetCoreWebAppContext();
@@ -57,6 +58,12 @@ namespace MyProject.Models.Repositories
 
         }
 
-
+        //Метод к Заданию 13
+        public List<Movie> MovieFor13()
+        {
+            var context = new NetCoreWebAppContext();
+            
+            return context.Movie.ToList();
+        }
     }
 }

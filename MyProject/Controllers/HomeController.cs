@@ -57,6 +57,11 @@ namespace MyProject.Controllers
             ViewData["Genres"] = dataRepository.Genres();
             return View();
         }
-  
+
+        //метод задания 13 часть 1:
+        public Movie Movie13Task(int zap)
+        {
+            return dataRepository.MovieFor13().FirstOrDefault(x => x.Id == zap); ;
+        }
     }
 }

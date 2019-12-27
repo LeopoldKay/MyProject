@@ -87,6 +87,38 @@ namespace TextProject
 
         }
 
+        // Тесты для задания 13
+        // Проверяем тип
+        [TestMethod]
+        public void TestMethodForTask13p1()
+        {
+            Mock<IDataRepository> characterRepository = new Mock<IDataRepository>();
+            characterRepository.Setup(x => x.MovieFor13()).Returns(new List<Movie>() { new Movie() { Id = 1 } });
+            var homeController = new HomeController(characterRepository.Object);
+
+
+            var dirList = homeController.Movie13Task(1);
+            
+            
+            Assert.IsInstanceOfType(dirList, typeof(Movie));
+
+        }
+
+        // Проверяем характеристику
+        [TestMethod]
+        public void TestMethodForTask13p2()
+        {
+            Mock<IDataRepository> characterRepository = new Mock<IDataRepository>();
+            characterRepository.Setup(x => x.MovieFor13()).Returns(new List<Movie>() { new Movie() { Id = 1, Name = "Star Wars" } });
+            var homeController = new HomeController(characterRepository.Object);
+
+
+            var dirList = homeController.Movie13Task(1).Name;
+
+
+            Assert.AreEqual(dirList, "Star Wars");
+
+        }
 
     }
 }

@@ -12,6 +12,11 @@ namespace MyProject.Models.Repositories
         List<ActorSelect> GetActors();
         List<DescSelect> Description();
         List<GenreSelect> Genres();
+
+        //часть задание 13
+        List<Movie> MovieFor13();
+
+
         
     }
 }
