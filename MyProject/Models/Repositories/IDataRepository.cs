@@ -12,6 +12,6 @@ namespace MyProject.Models.Repositories
         List<ActorSelect> GetActors();
         List<DescSelect> Description();
         List<GenreSelect> Genres();
-        List<Director> GetDirectorTest();
+        
     }
 }

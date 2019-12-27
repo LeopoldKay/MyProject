@@ -58,7 +58,7 @@ using System.Text.Encodings.Web;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(92, 47, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "50b3234eebf0402bba2c800666a75999", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "487fc1a41573487bb65b11773fab8791", async() => {
                 BeginContext(98, 34, true);
                 WriteLiteral("\r\n    <title>Test Method</title>\r\n");
                 EndContext();
@@ -78,7 +78,7 @@ using System.Text.Encodings.Web;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(141, 104, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f06138769306462994d0786e7c85bb9f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "38e613298b1a440283fae19bc86837ce", async() => {
                 BeginContext(147, 43, true);
                 WriteLiteral("\r\n    <table>\r\n\r\n        <tr>\r\n            ");
                 EndContext();

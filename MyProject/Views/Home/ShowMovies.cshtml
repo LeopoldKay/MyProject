@@ -28,7 +28,7 @@
     <table><tr><td>Movies Table</td></tr> </table>
     <table>
 
-        @foreach (var character in (ViewData["Characters"] as List<MyProject.Models.MovieSelect>))
+        @foreach (var character in (ViewData["Movies"] as List<MyProject.Models.MovieSelect>))
         {
             <tr>
                 <td>@character.Name</td>

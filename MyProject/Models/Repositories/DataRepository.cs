@@ -57,11 +57,6 @@ namespace MyProject.Models.Repositories
 
         }
 
-        public List<Director> GetDirectorTest()
-        {
-            var context = new NetCoreWebAppContext();
-            return context.Directors.ToList();
-        }
 
     }
 }
